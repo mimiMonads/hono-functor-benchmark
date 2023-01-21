@@ -22,6 +22,10 @@
 
  - P = parameter
  - Q = query
+ 
+ Note that:
+ - I intentionally avoided 1 Q 1 P , 3 Q , 3 Q 3 P, because the difference is too substantial and I think something is wrong. 
+
 
 ### Method
 
