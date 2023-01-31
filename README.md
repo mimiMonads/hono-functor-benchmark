@@ -13,12 +13,13 @@
 | Test  | endo  | hono  | dif  | r-dif  |
 |---------- |---------- |---------- |---------- |---------- |
 | "/" | <font color='green'> 39.10K </font>  | 35.79K | 3.31K | 9.25% |
-| nested | <font color='green'> 37.77K </font> | 34.55K | 3.5K | 9.32% |
-| 1 P | <font color='green'> 36.74K </font> | 34.27K | 2.47K | 7.2% |
-| 3 P | <font color='green'> 36.49K </font> | 33.29K | 3.2K | 9.6% |
+| nested | <font color='green'> 37.77K </font> | 34.55K | 3.22K | 9.63% |
+| 1 P | <font color='green'> 37.74K </font> | 34.27K | 3.47K | 10.12% |
+| 3 P | <font color='green'> 37.19K </font> | 33.29K | 3.9K | 11.71% |
 | 1 Q | <font color='green'> 35.34K </font> | 31.31K | 4.03K | 12.6%|
 | Read | <font color='green'> 17.37K </font> | 16.59K | 780 | 4.69% |
-| Total| <font color='green'> 202.31K </font> | 185.8K | 16.51K | 8.8% |
+| Total| <font color='green'> 204.51K </font> | 185.8K | 18.71K | 10.06% |
+
 
  - P = parameter
  - Q = query
