@@ -1,4 +1,9 @@
 
+### Repository
+
+
+[Endofunctor](https://github.com/mimiMonads/functor)
+
 ### System
 
 
@@ -12,20 +17,20 @@
 
 | Test  | endo  | hono  | dif  | r-dif  |
 |---------- |---------- |---------- |---------- |---------- |
-| "/" | <font color='green'> 39.10K </font>  | 35.79K | 3.31K | 9.25% |
-| nested | <font color='green'> 37.77K </font> | 34.55K | 3.22K | 9.63% |
-| 1 P | <font color='green'> 37.74K </font> | 34.27K | 3.47K | 10.12% |
-| 3 P | <font color='green'> 37.19K </font> | 33.29K | 3.9K | 11.71% |
-| 1 Q | <font color='green'> 35.34K </font> | 31.31K | 4.03K | 12.6%|
-| Read | <font color='green'> 17.37K </font> | 16.59K | 780 | 4.69% |
-| Total| <font color='green'> 204.51K </font> | 185.8K | 18.71K | 10.06% |
-
+| "/" | <font color='green'> 40.1k </font>  | 37.0K | 3.1K | 8.38% |
+| nested | <font color='green'> 39.0k </font> | 35.6K | 3.4K | 9.55% |
+| 1 P | <font color='green'> 39.4K </font> | 35.3K | 4.1K | 11.61% |
+| 3 P | <font color='green'> 38.4K </font> | 33.7K | 4.7K | 13.95% |
+| 1 Q | <font color='green'> 38.9K </font> | 32.0K | 6.9K | 21.56%|
+| 3 Q | <font color='green'> 38.5K </font> | 26.5K | 11.8K | 44.53%|
+| 1Q 1P | <font color='green'> 38.2K </font> | 30.8K | 7.4K | 24.03%|
+| 3Q 3P| <font color='green'> 37.2K </font> | 25.3K | 11.9K | 47.04%|
+| Total| <font color='green'> 309.5K </font> | 256.2K | 18.71K | 20.80% |
 
  - P = parameter
  - Q = query
  
- Note that:
- - I intentionally avoided 1 Q 1 P , 3 Q , 3 Q 3 P, because the difference is too substantial and I think something is wrong. 
+
 
 
 ### Method
@@ -51,8 +56,12 @@ oha  -z 100s -c 50 'http://127.0.0.1:8080/' ;
 oha  -z 100s -c 50 'http://127.0.0.1:8080/a/b/c/d/e/f/g/' ;
 oha  -z 100s -c 50 'http://127.0.0.1:8080/test/hello' ;
 oha  -z 100s -c 50 'http://127.0.0.1:8080/test/mul/1/2/3' ;
-oha  -z 100s -c 50 'http://127.0.0.1:8080/q?e=1' ;
-oha  -z 100s -c 50 'http://127.0.0.1:8080/json'
+oha  -z 100s -c 50 'http://127.0.0.1:8080/q?d=1' ;
+oha  -z 100s -c 50 'http://127.0.0.1:8080/multi?d=1&e=2&f=3' ;
+oha  -z 100s -c 50 'http://127.0.0.1:8080/test/both/1?d=2' ;
+oha  -z 100s -c 50 'http://127.0.0.1:8080/both/test/1/2/3?d=4&e=5&f=6';
 
 ```
+
+
 
