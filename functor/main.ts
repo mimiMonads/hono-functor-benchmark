@@ -13,29 +13,42 @@ await serve(
         r: (_) => new Response("hello world2"),
       },
       {
-        path: "/test/:id",
-        f: (f) => f.param.id,
-      },
-      {
-        path: "/test",
-        f: (f) => (f.query?.hello || "/test"),
-      },
-      {
-        path: "/test/both/:id",
-        f: (f) => f.param.id + " " + (f.query?.hello || "/test/both/:id"),
+        path: "/test/:a",
+        f: (f) => f.param.a,
       },
       {
         path: "/test/mul/:a/:b/:c",
-        f: (f) => f.param.b,
+        f: (f) => f.param.a + f.param.b + f.param.c,
       },
       {
         path: "/q",
-        f: (f) => (f.query?.e || "q"),
+        query: {
+          only: ["d"]
+        },
+        f: (f) => (f.query?.d || "/q"),
       },
       {
-        path: "/json",
-        f: async (_) => await Deno.readTextFile("./people.json"),
+        path: "/multi",
+        query: {
+          only: ["d","e","f"]
+        },
+        f: (f) => (f.query?.d || "q") + (f.query?.e || "q") + (f.query?.f || "q"),
       },
+      {
+        path: "/test/both/:a",
+        query: {
+          only: ["d"]
+        },
+        f: (f) => f.param.a + " " + (f.query?.d || "/test/both/:id"),
+      },
+      {
+        path: "/both/test/:a/:b/:c",
+        query: {
+          only: ["d","e","f"]
+        },
+        f: (f) => f.param.a + f.param.b + f.param.c + (f.query?.d || "q") + (f.query?.e || "q") + (f.query?.f || "q"),
+      },
+
     ],
   ),
   { port: 8080, hostname: "127.0.0.1" },
