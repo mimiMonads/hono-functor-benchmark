@@ -25,7 +25,7 @@
 | 3 Q | <font color='green'> 38.5K </font> | 26.5K | 11.8K | 44.53%|
 | 1Q 1P | <font color='green'> 38.2K </font> | 30.8K | 7.4K | 24.03%|
 | 3Q 3P| <font color='green'> 37.2K </font> | 25.3K | 11.9K | 47.04%|
-| Total| <font color='green'> 309.5K </font> | 256.2K | 18.71K | 20.80% |
+| Total| <font color='green'> 309.5K </font> | 256.2K | 53.3K | 20.80% |
 
  - P = parameter
  - Q = query
